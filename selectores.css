@@ -1,0 +1,73 @@
+/*  selectores */
+
+/* selector de etiqueta, vale para todos */
+h1 {
+    color: brown;
+}
+
+h2,
+h3 {
+    color: rgb(52, 121, 34);
+}
+
+/* selector de  clase se pone al selector con el punto*/
+.interesting {
+    color: darkcyan;
+}
+.sport {
+    font-size: 1.2rem;
+}
+
+/* En CCS3 aparecen los selectores de atributo  se indica entre []*/
+
+[title] {
+    color: rgb(219, 129, 65);
+}
+
+[title="Párrafo muy interesante"] {
+    background-color: brown;
+}
+
+/* selector de ID, solo vale para un elemento */
+/*
+#p1 {
+    color: rgb(38, 38, 245);
+}
+    */
+
+[id="p1"] {
+    color: rgb(38, 38, 245);
+}
+
+/* Selectores Combinados 
+
+Descendiente - Descendent: espacio
+Hijo - Child: >
+Hermano -Sibling ~
+Hermano siguiente - Sibling next +
+*/
+article p {
+    text-decoration: underline;
+}
+
+article > p {
+    font-weight: bold;
+}
+article ~ p {
+    color: crimson;
+}
+article + p {
+    background-color: bisque;
+}
+/* primera formqa de escribirlo 
+aside p {
+    color: cornflowerblue;
+}
+    */
+aside {
+    background-color: blue;
+
+    & > p {
+        color: blanchedalmond;
+    }
+}
