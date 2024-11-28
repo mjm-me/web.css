@@ -1,51 +1,70 @@
-/*  selectores */
+/* Selectores */
 
-/* selector de etiqueta, vale para todos */
-h1 {
+/* Selector de etiqueta*/
+
+h1,
+h2,
+h3 {
     color: brown;
 }
 
-h2,
-h3 {
-    color: rgb(52, 121, 34);
+/* Selector de clase */
+
+.interesting {
+    color: chartreuse;
+    background-color: black;
 }
 
-/* selector de  clase se pone al selector con el punto*/
-.interesting {
-    color: darkcyan;
-}
-.sport {
+/* [class='sports']  */
+.sports {
     font-size: 1.2rem;
 }
 
-/* En CCS3 aparecen los selectores de atributo  se indica entre []*/
+/* Selectores de atributo*/
 
 [title] {
-    color: rgb(219, 129, 65);
+    color: chocolate;
 }
 
 [title="Párrafo muy interesante"] {
-    background-color: brown;
+    background-color: rgb(197, 222, 223);
 }
 
-/* selector de ID, solo vale para un elemento */
-/*
+/* que empiece por */
+[title^="Párrafo"] {
+    /* las propiedades que elija */
+}
+
+/* que contenga */
+[title*="Párrafo"] {
+    /* las propiedades que elija */
+}
+
+/* que termine por */
+[title$="Párrafo"] {
+    /* las propiedades que elija */
+}
+
+/* Selector de Id */
+
 #p1 {
-    color: rgb(38, 38, 245);
-}
-    */
-
-[id="p1"] {
-    color: rgb(38, 38, 245);
+    color: blueviolet;
 }
 
-/* Selectores Combinados 
+/* Alternativa con atributos
 
-Descendiente - Descendent: espacio
-Hijo - Child: >
-Hermano -Sibling ~
-Hermano siguiente - Sibling next +
-*/
+[id='p1'] {
+    color: blueviolet;
+} */
+
+/* Selectores Combinados */
+
+/* 
+Descendiente: espacio
+Hijo >
+Hermano ~ 
+Hermano siguiente o adyacente + */
+
 article p {
     text-decoration: underline;
 }
@@ -53,21 +72,48 @@ article p {
 article > p {
     font-weight: bold;
 }
+
 article ~ p {
     color: crimson;
 }
+
 article + p {
     background-color: bisque;
 }
-/* primera formqa de escribirlo 
-aside p {
-    color: cornflowerblue;
-}
-    */
+
 aside {
-    background-color: blue;
+    background-color: darkkhaki;
 
     & > p {
-        color: blanchedalmond;
+        color: darkblue;
+        font-weight: bold;
     }
+}
+
+::first-letter {
+    font-size: 2rem;
+}
+::first-line {
+    text-decoration: dashed;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+/*elementos que estando dentro de algo están en 2 posición, cualquier cosa */
+:nth-child(2)
+
+/* los párrafos que sean el segundo contando solo párrafos */
+p:nth-of-type(2)
+a:not(:last-of-type) {
+    border-left: 1px black;
+}
+
+/*selectores muy modernos, muy potentes */
+section:has(.sports) {
+    border: solid 8px pink;
+}
+
+:is (section, article) :is(h1, h2) {
 }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- segundo ejercicio de html del curso - web.css -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ejemplo de uso básico del css">
+
+  <link rel="shortcut icon" href="favicon-16x16.png" type="image/png">
+  <!-- <link rel="stylesheet" href="./selectores.css"> -->
+
+  <title>Curso web - Aprendiendo CSS</title>
+  <style>
+    #p1 {
+      color: rgb(77, 4, 146);
+    }
+
+    p {
+      color: pink;
+    }
+
+    .level1 {
+      color: rgb(41, 176, 218);
+    }
+
+    [id="p1"] {
+      color: crimson;
+    }
+  </style>
+  <style>
+    a:hover::before {
+      content: '👌';
+    }
+
+    section::after {
+      content: 'ff';
+      background-color: rgba(137, 43, 226, 0.425);
+      width: 100%;
+      height: 100%;
+    }
+
+    ::marker {
+      color: brown;
+    }
+
+    :is(summary, li)::marker {
+      color: brown;
+    }
+  </style>
+</head>
+
+<header>
+  <h1>Cascada CSS</h1>
+  <p id="p1" class="level1">Soy un párrafo</p>
+</header>
+
+<body>
+  <section>
+    <div>
+      <a href="#uno">Un sitio</a>
+    </div>
+    <div>
+      <a href="#dos">Otro sitio</a>
+    </div>
+    <div>
+      <a href="#tres">Otro sitio</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Usando un after</h2>
+  </section>
+
+  <dialog>Esto es un dialog</dialog>
+
+  <details>
+    <summary>
+      <h3 style="display: inline">FAQ ...</h3>
+    </summary>
+    <p>Contenido 1</p>
+    <p>Contenido 2</p>
+    <p>Contenido 3</p>
+  </details>
+  <details>
+    <summary>FAQ ...</summary>
+    Contenido 2
+  </details>
+
+  <ul>
+    <li>uno</li>
+    <li>dos</li>
+    <li>tres</li>
+    <li>cuatro</li>
+  </ul>
+
+</body>
