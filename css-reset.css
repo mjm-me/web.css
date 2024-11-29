@@ -7,6 +7,7 @@
 /* 2. Remove default margin */
 * {
     margin: 0;
+    padding: 0;
 }
 body {
     /* 3. Add accessible line-height */
@@ -30,7 +31,7 @@ textarea,
 select {
     font: inherit;
 }
-/* 7. Avoid text overflows */
+/* 7. Avoid text overflows  evita que si la línea es muy larga no corte y deje solo una palabra*/
 p,
 h1,
 h2,
