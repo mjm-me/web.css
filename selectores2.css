@@ -30,19 +30,19 @@ h3 {
     background-color: rgb(197, 222, 223);
 }
 
-/* Empiece por */
+/* que empiece por */
 [title^="Párrafo"] {
-    /* Propiedades */
+    /* las propiedades que elija */
 }
 
-/* Contenga */
+/* que contenga */
 [title*="Párrafo"] {
-    /* Propiedades */
+    /* las propiedades que elija */
 }
 
-/* Termine */
+/* que termine por */
 [title$="Párrafo"] {
-    /* Propiedades */
+    /* las propiedades que elija */
 }
 
 /* Selector de Id */
@@ -90,37 +90,30 @@ aside {
     }
 }
 
-/* Pseudo-elementos [::]
-Pseudo-clases [:]*/
-
-p::first-letter {
+::first-letter {
     font-size: 2rem;
 }
-
-p::first-line {
-    text-decoration: underline;
+::first-line {
+    text-decoration: dashed;
 }
 
 button:hover {
-    font-size: 1.4rem;
+    background-color: aqua;
 }
 
-:nth-child(3n) section:nth-of-type(2) a:not(:last-of-type) {
+/*elementos que estando dentro de algo están en 2 posición, cualquier cosa */
+:nth-child(2)
+
+/* los párrafos que sean el segundo contando solo párrafos */
+p:nth-of-type(2)
+a:not(:last-of-type) {
+    border-left: 1px black;
 }
 
-section .sports {
-}
-
+/*selectores muy modernos, muy potentes */
 section:has(.sports) {
+    border: solid 8px pink;
 }
 
-:is(section, article) :is(h1, h2, h3) {
-}
-
-section,
-article {
-    color: bisque;
-}
-
-:where(section, article) p {
+:is (section, article) :is(h1, h2) {
 }

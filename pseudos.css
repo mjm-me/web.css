@@ -1,93 +1,5 @@
-/* Selectores */
-
-/* Selector de etiqueta*/
-
-h1,
-h2,
-h3 {
-    color: brown;
-}
-
-/* Selector de clase */
-
-.interesting {
-    color: chartreuse;
-    background-color: black;
-}
-
-/* [class='sports']  */
-.sports {
-    font-size: 1.2rem;
-}
-
-/* Selectores de atributo*/
-
-[title] {
-    color: chocolate;
-}
-
-[title="Párrafo muy interesante"] {
-    background-color: rgb(197, 222, 223);
-}
-
-/* que empiece por */
-[title^="Párrafo"] {
-    /* las propiedades que elija */
-}
-
-/* que contenga */
-[title*="Párrafo"] {
-    /* las propiedades que elija */
-}
-
-/* que termine por */
-[title$="Párrafo"] {
-    /* las propiedades que elija */
-}
-
-/* Selector de Id */
-
-#p1 {
-    color: blueviolet;
-}
-
-/* Alternativa con atributos
-
-[id='p1'] {
-    color: blueviolet;
-} */
-
-/* Selectores Combinados */
-
-/* 
-Descendiente: espacio
-Hijo >
-Hermano ~ 
-Hermano siguiente o adyacente + */
-
-article p {
-    text-decoration: underline;
-}
-
-article > p {
-    font-weight: bold;
-}
-
-article ~ p {
-    color: crimson;
-}
-
-article + p {
-    background-color: bisque;
-}
-
-aside {
-    background-color: darkkhaki;
-
-    & > p {
-        color: darkblue;
-        font-weight: bold;
-    }
+a:hover::before {
+    content: "👍";
 }
 
 section {
@@ -96,39 +8,25 @@ section {
 
 section::after {
     content: "";
-    background-color: blueviolet;
+    background-color: rgba(137, 43, 226, 0.32);
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -5; /* puede ser cualquier num porque es una capa */
+    z-index: -1;
 }
 
-::first-letter {
-    font-size: 2rem;
-}
-::first-line {
-    text-decoration: dashed;
+:is(summary, li)::marker {
+    color: brown;
+    font-size: 1.3rem;
 }
 
-button:hover {
-    background-color: aqua;
+section {
+    display: none;
 }
 
-/*elementos que estando dentro de algo están en 2 posición, cualquier cosa */
-:nth-child(2)
-
-/* los párrafos que sean el segundo contando solo párrafos */
-p:nth-of-type(2)
-a:not(:last-of-type) {
-    border-left: 1px black;
-}
-
-/*selectores muy modernos, muy potentes */
-section:has(.sports) {
-    border: solid 8px pink;
-}
-
-:is (section, article) :is(h1, h2) {
+section:target {
+    display: block;
+    border: 2px solid gainsboro;
 }

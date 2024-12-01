@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!-- primer ejercicio de html del curso - web.css -->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ejemplo de uso básico del css">
-
-  <link rel="shortcut icon" href="favicon-16x16.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
-
-  <title>Curso web - Aprendiendo CSS</title>
+  <meta name="description" content="Ejercicios de CSS">
+  <title>Aprendiendo CSS</title>
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
   <style>
     #p2 {
-      color: blueviolet
+      color: brown;
     }
   </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <header>
+    <h1>Aprendiendo CSS</h1>
+  </header>
   <main>
-    <h1>Usos del CSS</h1>
     <section>
-      <p id="p2">Para este párrafo se define el estilo en el CSS</p>
-      <p id="p3">Para este párrafo se define el estilo de la carpeta CSS</p>
+      <h2>
+        Usos del CSS
+      </h2>
+      <p style="color: rebeccapurple;">Usando CSS Inline</p>
+      <p id="p2">Para este párrafo se define el estilo en el HTML</p>
+      <p id="p3">Para este párrafo se define el estilo en el fichero CSS</p>
     </section>
     <section>
-      <h2>Conceptos claves</h2>
+      <h3>Conceptos clave</h3>
       <ul>
-        <li><a href="./selectores.html"></a>Selectores</li>
-        <li><a href="./variables.html"></a>Variables (custom properties)</a></li>
-        <li>Cascada
+        <li><a href="./selectores.html">Selectores</a>
+        </li>
+        <li><a href="./cascada-css.html">Cascada</a>
           <ul>
-            <li>aaa</li>
-            <li>bbb</li>
+            <li>Especificidad</li>
+            <li>Herencia</li>
+            <li>Orden</li>
           </ul>
         </li>
+        <li><a href="./pseudos.html">Pseudo... y otros</a></li>
+        <li><a href="./variables.html">Variables (custom properties)</a></li>
         <li>Layouts
           <ul>
-            <li>Display Flex</li>
+            <li><a href="./box-model.html">Box Model</a></li>
+            <li><a href="./layout-01.html">Basic layout</a></li>
+            <li><a href="./layout-flex.html">Display Flex</a></li>
             <li>Display Grid</li>
           </ul>
         </li>
@@ -48,9 +55,8 @@
   </main>
 
   <footer>
-    <p>CFD SB</p>
+    <address>CFD SB</address>
   </footer>
-
 </body>
 
 </html>
