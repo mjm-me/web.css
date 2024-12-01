@@ -19,18 +19,160 @@
     /* Generate sizes, element styles, and classes for h1, h2, h3, body. Generate sizes for h4-h6, a small size, and a large size (classes not needed, just variables).
   See https://codepen.io/jen4web/pen/KKGpKBM as an example */
 
+    --size-x-large: calc(var(--size-large) * var(--scale));
+    --size-large: calc(var(--size-medium) * var(--scale));
+    --size-medium: calc(var(--size-normal) * var(--scale));
+    --size-normal: var(--base-size);
+    --size-small: calc(var(--size-normal) / var(--scale));
+    --size-x-small: calc(var(--size-small) / var(--scale));
+
     /* other variables */
     --radius: 5px;
+
+    /* Create styles for h1, h2, h3, and body. Create a font size calculation, but no classes or element styles, for headings h4-h6 plus a “small” size (one size smaller than h6).
+Create both a heading style and a class for these sizes and styles (h1, .h1) */
 }
 
 /* add border box sizing to the page */
-html {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
+/* 2. Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
 }
 
 /* using the above variables and the HTML specified above, write CSS to style headings, text, links, images, figures, etc. */
+
+header {
+    background-color: var(--coffee);
+    min-height: 10vh;
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    justify-content: center; /* Opcional: alinear horizontalmente */
+    border-bottom: solid 6px var(--tan);
+
+    & > h1 {
+        color: var(--vanilla); /* Usando la variable definida anteriormente */
+        font-family: var(--decorative);
+        font-size: var(--size-x-large);
+        font-weight: 500;
+    }
+}
+
+span.fancy-text {
+    /*
+    text-decoration-line: line-through;
+    text-decoration-style: solid;
+    text-decoration-color: pink;
+    */
+    background: linear-gradient(to right, #7f4f24, #ddb892);
+    height: 10px;
+}
+
+.colors {
+    display: flex; /* Coloca las cajas en una fila */
+    gap: 30px; /* Espacio uniforme entre las cajas */
+    background-color: var(--vanilla);
+    border-top: solid 6px var(--coffee);
+    padding: 20px 0;
+}
+.colors div {
+    width: 80px;
+    /* width: 100svh; si quiero que todas las cajas se adapten proporcionalmente al ancho */
+    padding: 15px 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.white {
+    background-color: var(--white);
+    color: var(--coffee);
+    margin-left: 10px;
+}
+.green {
+    background-color: var(--green);
+    color: var(--vanilla);
+}
+.coffee {
+    background-color: var(--coffee);
+    color: var(--vanilla);
+}
+.vanilla {
+    background-color: var(--vanilla);
+    color: var(--coffee);
+    border: solid 1px var(--coffee);
+}
+.lemon {
+    background-color: var(--lemon);
+    color: var(--coffee);
+}
+.mocha {
+    background-color: var(--mocha);
+    color: var(--vanilla);
+}
+.tan {
+    background-color: var(--tan);
+    color: var(--coffee);
+}
+.blue {
+    background-color: var(--blue);
+    color: var(--vanilla);
+}
+
+body > h1,
+body > h2,
+body > h3 {
+    background-color: var(--vanilla);
+    font-family: var(--decorative);
+    font-weight: 500;
+    padding-bottom: 20px;
+    color: var(--coffee);
+}
+
+h1 {
+    font-size: var(--size-x-large);
+    color: var (--vanilla);
+}
+h2 {
+    font-size: var(--size-large);
+}
+h3 {
+    font-size: var(--size-medium);
+}
+p {
+    background-color: var(--vanilla);
+    font-family: var(--decorative);
+    font-weight: 100;
+    font-size: var(--size-small);
+    color: var(--coffee);
+    padding: 20px 0;
+}
+a {
+    margin: 0 0 10px;
+    background-color: var(--vanilla);
+    font-family: var(--decorative);
+    font-weight: 100;
+    font-size: var(--size-small);
+    color: var(--coffee);
+}
+a:hover {
+    text-decoration: none;
+}
+
+figure {
+    background-color: var(--vanilla);
+}
+img {
+    width: 100vw;
+}
+figcaption {
+    font-family: var(--decorative);
+    font-weight: 100;
+    font-size: var(--size-small);
+    color: var(--coffee);
+    padding: 10px 0;
+}
