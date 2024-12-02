@@ -16,8 +16,9 @@ p:nth-of-type(3) {
 }
 
 p:nth-of-type(2) {
-    background-color: rgba(219, 159, 167);
-    grid-column: -1 / -3; /* igual que decir -1 / -2 */
+    background-color: rgba(165, 42, 42);
+    color: bisque;
+    grid-column: -1 / -3;
     grid-row: 1 / 3;
     z-index: 1; /* hace que se coloque delante */
 }
