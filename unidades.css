@@ -1,0 +1,58 @@
+section.rem {
+    font-size: 1.5rem;
+    article {
+        font-size: 1.5rem;
+    }
+}
+
+section.em {
+    font-size: 1.5em;
+    article {
+        font-size: 1.5em;
+        p {
+            font-size: 1.5em;
+        }
+    }
+}
+
+/* el usuario que aumenta en su navegador el tamaño por que no ve bien, no respeta  */
+section.no-se-hace {
+    font-size: 24px;
+}
+
+section.fit {
+    div {
+        img {
+            width: 500px;
+            height: 333px;
+            border: solid 3px red;
+            object-fit: scale-down;
+        }
+    }
+}
+
+.parent {
+    display: flex;
+}
+.item {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    background: lightgrey;
+}
+
+.item-1 {
+    object-fit: fill;
+}
+.item-2 {
+    object-fit: cover;
+}
+.item-3 {
+    object-fit: contain;
+}
+.item-4 {
+    object-fit: scale-down;
+}
+.item-5 {
+    object-fit: none;
+}

@@ -13,7 +13,7 @@ section.box {
         margin: 1%;
     }
     span:nth-of-type(2n) {
-        background-color: chocolate;
+        background-color: hsla(25, 50%, 47%);
         padding: 100px;
     }
 }

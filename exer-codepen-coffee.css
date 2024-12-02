@@ -158,6 +158,7 @@ a {
     font-weight: 100;
     font-size: var(--size-small);
     color: var(--coffee);
+    width: 100vw;
 }
 a:hover {
     text-decoration: none;
