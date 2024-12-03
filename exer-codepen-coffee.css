@@ -53,7 +53,7 @@ header {
     display: flex;
     align-items: center; /* Alinear verticalmente */
     justify-content: center; /* Opcional: alinear horizontalmente */
-    border-bottom: solid 6px var(--tan);
+    border-bottom: double 15px var(--tan);
 
     & > h1 {
         color: var(--vanilla); /* Usando la variable definida anteriormente */
@@ -70,6 +70,7 @@ span.fancy-text {
     text-decoration-color: pink;
     */
     background: linear-gradient(to right, #7f4f24, #ddb892);
+    background-position-x: right 20px;
     height: 10px;
 }
 
@@ -77,7 +78,6 @@ span.fancy-text {
     display: flex; /* Coloca las cajas en una fila */
     gap: 30px; /* Espacio uniforme entre las cajas */
     background-color: var(--vanilla);
-    border-top: solid 6px var(--coffee);
     padding: 20px 0;
 }
 .colors div {
