@@ -15,30 +15,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./main.css">
-  <script type="module" href="./main.js" defer></script>
+  <script type="module" src="./main.js" defer></script>
 </head>
 
 <body>
   <header>
     <nav>
       <ul>
-        <li class="menu-header"><a href="#">
+        <li class="menu-header" style="border: solid 1px;"><a href="#">
             <h1>Ernestina</h1>
           </a>
         </li>
-        <li class="menu-mobile"><a href="#">
+        <li class="menu-mobile" style="border: solid 1px;"><a href="#">
             <span class="fa-solid fa-bars"></span>
           </a>
         </li>
-        <li class="menu-tablet"><a href="#">Proyectos</a></li>
-        <li class="menu-tablet"><a href="#">Acerca de</a></li>
-        <li class="menu-tablet"><a href="#">Contacta</a></li>
-        <li class="menu-tablet"><a href="">
+        <li class="menu-tablet" style="border: solid 1px;"><a href="#">Proyectos</a></li>
+        <li class="menu-tablet" style="border: solid 1px;"><a href="#">Acerca de</a></li>
+        <li class="menu-tablet" style="border: solid 1px;"><a href="#">Contacta</a></li>
+        <li class="menu-tablet" style="border: solid 1px;">
+          <a href="" title="Linkedin">
             <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-          </a></li>
-        <li class="menu-tablet"><a href="">
+          </a>
+        </li>
+        <li class="menu-tablet" style="border: solid 1px;">
+          <a href="" title="GitHub">
             <i class="fa-brands fa-github" aria-hidden="true"></i>
-          </a></li>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -52,11 +56,16 @@
         <li class="menu-dialog"><a href="#">Proyectos</a></li>
         <li class="menu-dialog"><a href="#">Acerca de</a></li>
         <li class="menu-dialog"><a href="#">Contacta</a></li>
-        <li class="menu-dialog"><a href="">
-            LinkedIn <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        <li class="menu-dialog"><a href="" title="LinedIn">
+            <span>LinkedIn</span>
+
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
           </a></li>
-        <li class="menu-dialog"><a href="">
-            GitHub <i class="fa-brands fa-github" aria-hidden="true"></i>
+        <li class="menu-dialog"><a href="" title="GitHub">
+            <span>GitHub</span>
+
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+
           </a></li>
       </ul>
     </nav>
@@ -74,8 +83,8 @@
         https://placehold.jp/300x300.png 300w,
         https://placehold.jp/600x600.png 600w,
         https://placehold.jp/1200x1200.png 1200w,
-        https://placehold.jp/2000x2000.png 2000w" src="https://placehold.jp/300x300.png"
-          sizes="(min-width: 650px) 50vw, 100vw" alt="Placeholder de imagen">
+        https://placehold.jp/2000x2000.png 2000w" sizes="(min-width: 650px) 50vw"
+          src="https://placehold.jp/200x200.png" alt="Placeholder de imagen">
 
         <div class="articles-wrapper">
           <article>
@@ -88,10 +97,6 @@
             <p>Illo incidunt ducimus eaque, odit nam non quidem quia ea minus vero qui, deserunt assumenda, vitae
               mollitia
               voluptatibus quaerat! Deserunt debitis aliquid earum hic totam nostrum provident, iste et fugit?</p>
-            <p>Illo incidunt ducimus eaque, odit nam non quidem quia ea minus vero qui, deserunt assumenda, vitae
-              mollitia
-              voluptatibus quaerat! Deserunt debitis aliquid earum hic totam nostrum provident, iste et fugit?</p>
-
           </article>
           <article>
             <h3>Segundo artículo</h3>
@@ -100,6 +105,9 @@
             <p>Aliquam odio itaque est. Quidem fugiat, sit a in laboriosam cum possimus placeat pariatur esse autem
               minus,
               commodi saepe ut? Tempora magnam obcaecati enim porro doloremque nam corrupti minima ullam!</p>
+            <p>Illo incidunt ducimus eaque, odit nam non quidem quia ea minus vero qui, deserunt assumenda, vitae
+              mollitia
+              voluptatibus quaerat! Deserunt debitis aliquid earum hic totam nostrum provident, iste et fugit?</p>
           </article>
         </div>
       </section>
@@ -108,7 +116,13 @@
         <h2>
           Finales
         </h2>
-        <img src="https://picsum.photos/seed/picsum/500/300" alt="Imagen random">
+        <picture>
+          <source media="(min-width: 470px)" srcset="https://placehold.jp/700x500.png">
+
+          <img src="https://placehold.jp/500x300.png" alt="Imagen random">
+        </picture>
+
+
         <div class="final-content">
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error officia similique eligendi necessitatibus
             provident nostrum repellendus tenetur minima quae eius, porro sed eveniet odio aperiam repudiandae eum velit
@@ -125,6 +139,8 @@
             ipsum ipsa obcaecati iusto iure! Perspiciatis maxime, quod eligendi est odit non exercitationem quis sunt
             sapiente reiciendis?</p>
         </div>
+
+
       </section>
       <div class="separator"></div>
     </main>
@@ -135,6 +151,7 @@
       </address>
     </footer>
   </div>
+
 </body>
 
 </html>
