@@ -3,82 +3,67 @@
 }
 
 body {
-    padding-inline: 2rem;
+    margin-inline: 2rem;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 2fr 3fr; /* aquí sólo defino cómo quiero que sean las dos primeras y el resto lo hace auto*/
-    grid-auto-rows: 5rem;
-    gap: 1rem;
-
-    p:nth-of-type(5) {
-        background-color: rgba(188, 199, 124, 0.363);
-        color: rgb(51, 105, 74);
-        position: relative;
-        top: 70px;
-        left: -80px;
-    }
-}
 p {
     padding: 1rem;
 }
 
-/* me refiero a las párrafos por su posición y lo aplico solo a grid */
-section.grid > p:nth-of-type(3) {
-    background-color: rgba(8, 189, 113);
-    grid-column: 1 / 3;
-    grid-row: 1 / 4;
-}
-
-section.grid > p:nth-of-type(2) {
-    background-color: rgba(165, 42, 42);
-    color: bisque;
-    grid-column: -1 / -3;
-    grid-row: 1 / 3;
-    z-index: 1; /* hace que se coloque delante */
-}
-
-.anchor {
-    anchor-name: --red;
-}
-
-/* otra manera de escribirlo
 section.grid {
-    & p:nth-of-type(3) {
-    background-color: rgba(8, 189, 113);
-    grid-column: 1 / 3;
-    grid-row: 1 / 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 5rem;
+    gap: 1rem;
 
-    & p:nth-of-type(2) {
-    background-color: rgba(165, 42, 42);
-    color: bisque;
-    grid-column: -1 / -3;
-    grid-row: 1 / 3;
-    z-index: 1; 
+    p:nth-of-type(3) {
+        background-color: rgba(255, 228, 196);
+        grid-column: 1 / 3;
+        grid-row: 1 / 4;
+    }
+
+    p:nth-of-type(2) {
+        background-color: brown;
+        color: bisque;
+        grid-column: -1 / -3;
+        grid-row: 1 / 3;
+        z-index: 1;
+        anchor-name: --red-p;
+    }
+
+    p:nth-of-type(5) {
+        color: crimson;
+        background-color: rgba(122, 111, 50, 0.566);
+        position: relative;
+        top: -80px;
+        left: -80px;
     }
 }
-*/
 
 section.icon {
-    position: relative;
     min-height: 3rem;
-    border: solid 1px;
+    border: 1px solid;
     border-radius: 3rem;
-    background-color: cadetblue;
+    position: relative;
+
     p:first-child {
-        position: absolute;
-        background-color: bisque;
-        top: -2rem;
-        left: 0;
-    }
-    p:nth-of-type(2) {
-        background-color: darkgoldenrod;
+        background-color: rgba(203, 129, 76, 0.542);
         border-radius: 50%;
         position: absolute;
-        position-anchor: --red;
-        position-area: top right;
+        top: -2rem;
+        left: 50%;
+    }
+
+    p:nth-of-type(2) {
+        background-color: rgba(10, 53, 10, 0.467);
+        border-radius: 50%;
+        /* position: absolute; */
+        position: fixed;
+        position-anchor: --red-p;
+        /* top: anchor(--red-p center);
+        right: anchor(--red-p center); */
+        position-area: center center;
+        z-index: 2;
     }
 }
 
