@@ -77,8 +77,14 @@ header {
             justify-content: space-between;
             align-items: center;
         }
-        [class*="fa-"] {
+        [class*="fa-bars"] {
             font-size: 2rem;
+        }
+        [class*="fa-linkedin"] {
+            font-size: 1.5rem;
+        }
+        [class*="fa-github"] {
+            font-size: 1.5rem;
         }
     }
 }
@@ -115,25 +121,43 @@ main {
     border: 1px solid brown;
 }
 
+dialog {
+    border: none;
+    background-color: bisque;
+    top: 5rem;
+    left: 0;
+    width: 50%;
+    padding: 1rem;
+
+    .close {
+        text-align: right;
+        button {
+            padding: 0.5rem;
+        }
+    }
+}
+
 @media (width > 470px) {
     body {
-        background-color: rgb(250, 206, 153);
-    }
-    .menu-mobile {
-        display: none;
-    }
 
-    .menu-tablet {
-        display: initial;
     }
+    header {
+        .menu-mobile {
+            display: none;
+        }
 
-    .menu-header {
-        flex-basis: 100%;
-        text-align: center;
-        padding-block-end: 0.5rem;
-        a {
-            display: block;
+        .menu-tablet {
+            display: initial;
+        }
+
+        .menu-header {
+            flex-basis: 100%;
+            text-align: center;
             padding-block-end: 0.5rem;
+            a {
+                display: block;
+                padding-block-end: 0.5rem;
+            }
         }
     }
 }
@@ -146,10 +170,19 @@ main {
 }
 
 @media (width > 650px) {
-    header nav ul {
+    body {
+        background-color: rgb(117, 187, 100);
+    }
+    header {
+        nav ul {
         align-items: baseline;
     }
 
+    .main-img{
+        float: right;
+        padding-inline-start: 1rem;
+        width: 50%;
+    }
     .menu-header {
         flex-basis: auto;
         padding-block-end: 0rem;
@@ -159,6 +192,14 @@ main {
             display: initial;
             /* padding-block-end: 0.5rem; */
         }
+    }
+    .articles-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    .final-content{
+        columns: 2;
     }
 }
 
@@ -172,6 +213,9 @@ main {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
+    }
+    .final-content{
+        columns: 2;
     }
 }
 

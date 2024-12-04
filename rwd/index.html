@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./main.css">
+  <script type="module" href="./main.js" defer></script>
 </head>
 
 <body>
@@ -33,14 +34,34 @@
         <li class="menu-tablet"><a href="#">Acerca de</a></li>
         <li class="menu-tablet"><a href="#">Contacta</a></li>
         <li class="menu-tablet"><a href="">
-            LinedIn
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
           </a></li>
         <li class="menu-tablet"><a href="">
-            GitHub
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
           </a></li>
       </ul>
     </nav>
   </header>
+
+  <dialog>
+    <p class="close">
+      <button class="fa-solid fa-xmark"></button>
+    </p>
+    <nav>
+      <ul>
+        <li class="menu-dialog"><a href="#">Proyectos</a></li>
+        <li class="menu-dialog"><a href="#">Acerca de</a></li>
+        <li class="menu-dialog"><a href="#">Contacta</a></li>
+        <li class="menu-dialog"><a href="">
+            LinkedIn <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </a></li>
+        <li class="menu-dialog"><a href="">
+            GitHub <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a></li>
+      </ul>
+    </nav>
+  </dialog>
+
   <div class="container">
     <main>
       <section>
@@ -49,7 +70,12 @@
           voluptatum aliquid et corrupti quam magni, esse expedita vel deleniti sit amet tenetur quibusdam laborum
           cumque!
         </p>
-        <img src="https://placehold.jp/300x300.png" alt="Placeholder de imagen">
+        <img class="main-img" srcset="
+        https://placehold.jp/300x300.png 300w,
+        https://placehold.jp/600x600.png 600w,
+        https://placehold.jp/1200x1200.png 1200w,
+        https://placehold.jp/2000x2000.png 2000w" src="https://placehold.jp/300x300.png"
+          sizes="(min-width: 650px) 50vw, 100vw" alt="Placeholder de imagen">
 
         <div class="articles-wrapper">
           <article>
@@ -62,6 +88,10 @@
             <p>Illo incidunt ducimus eaque, odit nam non quidem quia ea minus vero qui, deserunt assumenda, vitae
               mollitia
               voluptatibus quaerat! Deserunt debitis aliquid earum hic totam nostrum provident, iste et fugit?</p>
+            <p>Illo incidunt ducimus eaque, odit nam non quidem quia ea minus vero qui, deserunt assumenda, vitae
+              mollitia
+              voluptatibus quaerat! Deserunt debitis aliquid earum hic totam nostrum provident, iste et fugit?</p>
+
           </article>
           <article>
             <h3>Segundo artículo</h3>
@@ -70,9 +100,6 @@
             <p>Aliquam odio itaque est. Quidem fugiat, sit a in laboriosam cum possimus placeat pariatur esse autem
               minus,
               commodi saepe ut? Tempora magnam obcaecati enim porro doloremque nam corrupti minima ullam!</p>
-            <p>Illo incidunt ducimus eaque, odit nam non quidem quia ea minus vero qui, deserunt assumenda, vitae
-              mollitia
-              voluptatibus quaerat! Deserunt debitis aliquid earum hic totam nostrum provident, iste et fugit?</p>
           </article>
         </div>
       </section>
@@ -82,19 +109,22 @@
           Finales
         </h2>
         <img src="https://picsum.photos/seed/picsum/500/300" alt="Imagen random">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error officia similique eligendi necessitatibus
-          provident nostrum repellendus tenetur minima quae eius, porro sed eveniet odio aperiam repudiandae eum velit
-          libero minus!</p>
-        <p>Qui, aliquam debitis sint magni laudantium modi, sequi libero amet saepe temporibus sunt nobis dolorem
-          accusantium quae! Consequuntur aliquid laborum quo iusto odit itaque? Neque, labore maiores! Odio, suscipit
-          dolor!</p>
-        <p>Nostrum, laboriosam quas delectus aspernatur vel aliquam vero quasi, qui, molestiae amet reiciendis
-          perferendis. Commodi nihil assumenda voluptates distinctio, voluptatum nam dolor! Distinctio deserunt
-          laudantium
-          expedita iure voluptas ipsum omnis?</p>
-        <p>Doloremque beatae odit veniam repellat dicta reprehenderit minima, molestias, aperiam ea explicabo quibusdam
-          ipsum ipsa obcaecati iusto iure! Perspiciatis maxime, quod eligendi est odit non exercitationem quis sunt
-          sapiente reiciendis?</p>
+        <div class="final-content">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error officia similique eligendi necessitatibus
+            provident nostrum repellendus tenetur minima quae eius, porro sed eveniet odio aperiam repudiandae eum velit
+            libero minus!</p>
+          <p>Qui, aliquam debitis sint magni laudantium modi, sequi libero amet saepe temporibus sunt nobis dolorem
+            accusantium quae! Consequuntur aliquid laborum quo iusto odit itaque? Neque, labore maiores! Odio, suscipit
+            dolor!</p>
+          <p>Nostrum, laboriosam quas delectus aspernatur vel aliquam vero quasi, qui, molestiae amet reiciendis
+            perferendis. Commodi nihil assumenda voluptates distinctio, voluptatum nam dolor! Distinctio deserunt
+            laudantium
+            expedita iure voluptas ipsum omnis?</p>
+          <p>Doloremque beatae odit veniam repellat dicta reprehenderit minima, molestias, aperiam ea explicabo
+            quibusdam
+            ipsum ipsa obcaecati iusto iure! Perspiciatis maxime, quod eligendi est odit non exercitationem quis sunt
+            sapiente reiciendis?</p>
+        </div>
       </section>
       <div class="separator"></div>
     </main>
