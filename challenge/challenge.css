@@ -1,0 +1,320 @@
+/* Mobile first o Diseño ascendente */
+:root {
+    /* colores */
+    --white: #ffffff;
+
+    --zircon: #f8f9ff;
+    --alto: #d8d8d8;
+    --mine-shaft: #2d2d2d;
+
+    --observatory: #009379;
+    --aqua-squeeze: #e5f4f2;
+
+    --sweet-corn: #f8d57e;
+    --mandys-pink: #f2bfaf;
+    --persimmon: #ff6250;
+
+    /*fuentes*/
+    --base-size: 1rem; /* Equivale a 16px */
+    --scale: 1.333;
+    --font-weight-poppins-bold: 700;
+    --font-weight-poppins-semibold: 600;
+    --font-weight-mulish-regular: 400;
+
+    --font-title: "Poppins", sans-serif;
+    --display-2XL-size: calc(var(--base-size) * (var(--scale) * 5.625)); /*90*/
+    --display-XL-size: calc(var(--base-size) * (var(--scale) * 4.1875)); /*67*/
+    --display-L-size: calc(var(--base-size) * (var(--scale) * 3.125)); /*50*/
+    --display-M-size: calc(var(--base-size) * (var(--scale) * 2.375)); /*38*/
+    --display-S-size: calc(var(--base-size) * (var(--scale) * 1.75)); /*28*/
+    --display-XS-size: calc(var(--base-size) * (var(--scale) * 1.75)); /*28*/
+    --display-2XS-size: calc(var(--base-size) * (var(--scale) / 1.142)); /*21*/
+
+    --font-base: "Mulish", sans-serif;
+    --body-XL-size: calc(var(--base-size) * (var(--scale) * 1.75)); /*28*/
+    --body-L-size: calc(var(--base-size) * (var(--scale) * 1.3125)); /*21*/
+    --body-M-size: var(--base-size); /* 16px */
+    --body-S-size: calc(var(--base-size) * (var(--scale) / 1.142)); /*14*/
+    /*
+    --body-S: 14px "Mulish", 400;
+    */
+}
+
+body {
+    background-color: var(--zircon);
+}
+
+body,
+p,
+span,
+a,
+li {
+    font-family: var(--font-base);
+    font-weight: var(--font-weight-mulish-regular);
+    color: var(--mine-shaft);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-title);
+    color: var(--observatory);
+}
+h1 {
+    font-size: var(--display-XL-size);
+    font-weight: var(--font-weight-poppins-bold);
+}
+h2 {
+    font-size: var(--display-XL-size);
+    font-weight: var(--font-weight-poppins-bold);
+    line-height: 87.1px;
+    letter-spacing: -2.5%;
+}
+h3 {
+    font-size: var(--display-L-size);
+    font-weight: var(--font-weight-poppins-bold);
+}
+h4 {
+    font-size: var(--display-M-size);
+    font-weight: var(--font-weight-poppins-bold);
+    line-height: 49.4px;
+    letter-spacing: -2%;
+}
+}
+h5 {
+    font-size: var(--display-S-size);
+    font-weight: var(--font-weight-poppins-bold);
+    line-height: 36.4px;
+}
+h6 {
+    font-size: var(--display-XS-size);
+    font-weight: var(--font-weight-poppins-semibold);
+    line-height: 27.3px;
+}
+
+p {
+    font-size: var(--body-L-size);
+    line-height: 31.5px;
+}
+
+.navbar {
+    background-color: #ff6250;
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinear verticalmente los elementos */
+    gap: 50px;
+    min-height: 100px;
+    padding: 20px 50px;
+}
+
+.logo {
+    display: flex; /* Usamos Flexbox para alinear los elementos en línea */
+    align-items: center; /* Centramos verticalmente */
+    gap: 1px; /* Espacio entre el logotipo y el texto */
+}
+.logo img {
+    width: 32px;
+    height: 32px;
+}
+.logo p {
+    font-size: var(--display-2XS-size);
+    font-weight: var(--font-weight-poppins-bold);
+    line-height: 27.3px;
+    color: var(--mine-shaft);
+}
+.logo p span {
+    font-size: var(--display-2XS-size);
+    font-weight: 400;
+    line-height: 27.3px;
+    color: var(--mine-shaft);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 50px; /* Espacio entre los botones */
+    font-size: var(--display-2XS-size);
+    font-weight: var(--font-weight-poppins-semibold);
+    line-height: 24px;
+}
+.nav-buttons p a {
+    padding: 16px 0px;
+    font-size: var(--display-2XS-size);
+    font-weight: var(--font-weight-poppins-semibold);
+    color: var(--observatory);
+}
+
+.button1 {
+    display: inline-block; /* Se comporta como un botón en línea */
+    padding: 16px 50px; /* Espaciado interno */
+    background-color: var(--aqua-squeeze); /* Color de fondo del botón */
+    color: var(--observatory); /* Color del texto */
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 20px; /* Bordes redondeados */
+}
+.button1:hover {
+    text-decoration: underline; /* Subraya al pasar el ratón */
+}
+
+.button2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 20px;
+    padding: 16px 50px;
+    background-color: var(--observatory);
+    color: var(--zircon);
+    border: none;
+}
+.button2:hover {
+    text-decoration: underline; /* Subraya al pasar el ratón */
+}
+
+.hero-wrapper {
+    /*background-color: lime;*/
+    display: flex;
+    justify-content: center; /* Centra la sección hero horizontalmente */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 120px 55px;
+}
+
+.hero-section {
+    /*background-color: yellow;*/
+    display: flex; /* Utiliza Flexbox para alinear los elementos en una fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 40px; /* Espacio entre los elementos */
+
+    .hero-header {
+        /*background-color: rgb(170, 222, 159);*/
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 40px;
+
+        .hero-header-text {
+            h2 {
+                color: var(--mine-shaft);
+            }
+            p {
+                margin-top: 40px;
+            }
+        }
+        .hero-cta {
+            /*background-color: yellow;*/
+            display: inline-flex;
+            gap: 18px;
+            .button1 {
+                display: inline-block; /* Se comporta como un botón en línea */
+                padding: 16px 50px; /* Espaciado interno */
+                background-color: var(
+                    --aqua-squeeze
+                ); /* Color de fondo del botón */
+                color: var(--observatory); /* Color del texto */
+                text-align: center; /* Centra el texto */
+                text-decoration: none; /* Elimina el subrayado del enlace */
+                border-radius: 20px; /* Bordes redondeados */
+            }
+            .button1:hover {
+                text-decoration: underline; /* Subraya al pasar el ratón */
+            }
+
+            .button2 {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                border-radius: 20px;
+                padding: 16px 50px;
+                background-color: var(--observatory);
+                color: var(--zircon);
+                border: none;
+            }
+            .button2:hover {
+                text-decoration: underline; /* Subraya al pasar el ratón */
+            }
+        }
+    }
+
+    .hero-img {
+        flex-basis: content; /* ajusta automáticamente el tamaño al contenido del elemento */
+        flex-shrink: 0; /* Evita que la imagen se encoja */
+        img {
+            width: 450px;
+            height: 450px;
+        }
+    }
+}
+
+.features-wrapper {
+    /*background-color: lime;*/
+    display: flex;
+    justify-content: center; /* Centra la sección hero horizontalmente */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 120px 55px;
+}
+
+.features-section {
+    /*background-color: yellow;*/
+    display: flex; /* Utiliza Flexbox para alinear los elementos en una fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 40px; /* Espacio entre los elementos */
+
+    .features-img {
+        background-color: palevioletred;
+        flex-basis: content; /* ajusta automáticamente el tamaño al contenido del elemento */
+        flex-shrink: 0; /* Evita que la imagen se encoja */
+        img {
+            width: 450px;
+            height: 450px;
+        }
+    }
+
+    .features-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 40px;
+            h4 {
+                color: var(--mine-shaft);
+            }
+            p {
+                margin-top: 40px;
+            }
+    }
+.features-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 600px;
+        width: 100%;
+
+        .button-item {
+            background-color: var(--white);/* Color de fondo */
+            display: flex; /* Utilizamos flexbox para alinear ícono y texto horizontalmente */
+            align-items: center; /* Alinea verticalmente al centro */
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .button-item:hover { 
+            transform: scale(1.05);
+        }
+        .button-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px; /* Espacio entre el ícono y el texto */ 
+        }
+        .button-item p { 
+            margin: 0; 
+            font-size: inherit; 
+            color: inherit;
+        }
+   }
+}
+
+    
